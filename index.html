@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de inscripción</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    
+</head>
+<body>
+    <main id="main" data-aos="fade-down"
+    data-aos-duration="1500">
+        <!-- input#name[name=""][type="text"][for=""][class=""][placeholder=""][required] -->
+        <section id="form__section">
+            <h1 id="title">Formulario de inscripción</h1>
+            <p id="description">¡Gracias por elegirnos! Nos contactaremos a la brevedad, ya sea por mail o por whatsapp</p>
+            <form action="#" method="post" id="survey-form">
+                <div class="form__group">
+                    <label for="name" id="name-label">Nombre</label>
+                    <input type="text" name="name" id="name" class="not-submit" placeholder="Su nombre completo" required>
+                </div>
+                <div class="form__group">
+                    <label for="email" id="email-label">Correo electrónico</label>
+                    <input type="email" name="email" id="email" class="not-submit" placeholder="sucorreo@electronico.com" required>
+                </div>
+                <div class="form__group">
+                    <label for="age" id="number-label">Edad</label>
+                    <input type="number" name="age" id="age" class="not-submit" min="18" max="121" oninvalid="this.setCustomValidity('ATENCIÓN:\nEl curso es para mayores de 18 años')" placeholder="Mayores de 18 años" required>
+                </div>
+                <div class="form__group">
+                    <label for="dropdown" id="dropdown-label">Ocupación actual</label>
+                    <select type="text" name="dropdown" id="dropdown" class="not-submit" required>
+                        <option hidden selected value>Seleccione una opción</option>
+                        <optgroup label="___ Estudiante ___">
+                            <option value="secundarios">Estudios primarios, secundarios o cursos</option>
+                            <option value="terciarios">Estudios terciarios</option>
+                            <option value="universitarios">Estudios universitarios</option>
+                        </optgroup>
+                        <optgroup label="___ Trabajador en relación de dependencia ___">
+                            <optgroup label="__ Contrato fijo __">
+                                <option value="formal">Empleado formal</option>
+                                <option value="informal">Empleado informal</option>
+                            </optgroup>
+                            <optgroup label="__ Contrato temporal __">
+                                <option value="formal-temporal">Empleado formal (temporal)</option>
+                                <option value="informal-temporal">Empleado informal (temporal)</option>
+                            </optgroup>
+                        </optgroup>
+                        <optgroup label="___ Trabajador independiente ___">
+                            <option value="autonomo">Trabajador autónomo</option>
+                            <option value="monotributista">Trabajador monotributista</option>
+                            <option value="no-registrado">No registrado</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div class="form__group">
+                    <label for="courses" id="courses-label">¿Cuáles de estos cursos son de tu interés?</label>
+                    <fieldset id="courses-checkbox">
+                        <legend>Elige varios</legend>
+                        <label>
+                            <input 
+                                name="courses"
+                                type="checkbox"
+                                value="web-designer"
+                            >Desarrollo web
+                        </label>
+                        <label>
+                            <input 
+                                name="courses"
+                                type="checkbox"
+                                value="disenio-ux-ui"
+                            >Diseño UX/UI
+                        </label>
+                        <label>
+                            <input 
+                                name="courses"
+                                type="checkbox"
+                                value="data-scientist"
+                            >Experto en ciencia de datos
+                        </label>
+                        <label>
+                            <input 
+                                name="courses"
+                                type="checkbox"
+                                value="fundamentos"
+                            >Fundamentos de programación
+                        </label>
+                        <label>
+                            <input 
+                                name="courses"
+                                type="checkbox"
+                                value="python-basic"
+                            >Programación básica en Python
+                        </label>
+                        <label>
+                            <input 
+                                name="courses"
+                                type="checkbox"
+                                value="python-advanced"
+                            >Programación avanzada en Python
+                        </label>
+                    </fieldset>
+                </div>
+                <div class="form__group">
+                    <label for="priority" id="priority-label">Si tuvieras que elegir la beca solo para una categoría, ¿cuál sería tu prioridad?</label>
+                    <fieldset>
+                        <legend>Elige una categoría</legend>
+                        <label>
+                            <input 
+                                name="priority"
+                                type="radio"
+                                value="programacion"
+                                checked
+                            >Programación
+                        </label>
+                        <label>
+                            <input 
+                                name="priority"
+                                type="radio"
+                                value="disenio"
+                            >Diseño UX/UI
+                        </label>
+                        <label>
+                            <input 
+                                name="priority"
+                                type="radio"
+                                value="reparacion"
+                            >Reparación de celulares
+                        </label>
+                    </fieldset>
+                </div>
+                <div class="form__group">
+                    <label for="grant" id="grant-label">¿Necesitarías una beca para empezar a aprender con nosotros?</label>
+                    <input type="text" name="grant" id="grant" class="not-submit" placeholder="" required>
+                </div>
+                <div class="form__group">
+                    <label for="comments" id="comments-label">¿Comentarios o sugerencias? <em>(opcional)</em></label>
+                    <textarea name="comments" id="comments" style="resize: none;" class="not-submit"></textarea>
+                </div>
+                <div class="form__group">
+                    <input type="submit">
+                </div>
+            </form>
+        </section>
+    </main>    
+    <a href='https://www.freepik.es/fotos/fondo' id="creditos">Foto de Fondo creado por denamorado - www.freepik.es</a>
+    
+</body>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+</html>
